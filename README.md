@@ -1,5 +1,8 @@
+# bookworms-ui
+Practicing Flexbox by copying the project BookWormsRD
+
 #### Install
-`npm install`
+`yarn install`
 
 #### Gulp
 
