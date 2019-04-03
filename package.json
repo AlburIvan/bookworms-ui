@@ -10,6 +10,7 @@
         "theme",
         "template"
     ],
+    "template": "https://www.bookwormsrd.com/",
     "license": "MIT",
     "author": "MaG",
     "dependencies": {
