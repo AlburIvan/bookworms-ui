@@ -1,0 +1,60 @@
+header {
+    display: flex;
+    flex-direction: column;
+    background-color:  $primary;
+
+    .header-search {
+
+        display: flex;
+        flex-direction: row;
+        height: 70px;
+        padding: 20px 20px 10px 20px;
+        
+        &__logo {
+            flex: 1;
+            width: 15%;
+            background-color: red;
+        }
+
+        &__input{
+            // flex: 3;
+            display: flex;
+            flex-direction: row;
+            background-color: royalblue;
+
+            input {
+
+            }
+
+            a {
+                // width: 50%;
+                // height: 30%;
+                padding: 5px;
+                background-color: $pale-skin;
+
+                img {
+                    width: 10%;
+                }
+            }
+        }
+
+        &__cart {
+            flex: 1;
+            // max-width: 2%;
+            // padding: 15px;
+
+            background-color: palegreen;
+        }
+    }
+
+
+    .header-navigation {
+        display: flex;
+        flex-direction: row;
+        height: 48px;
+    }
+}
+
+
+
+// background-color: ;
