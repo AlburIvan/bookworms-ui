@@ -1,60 +1,173 @@
 header {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary;
+
+  .header-search {
     display: flex;
-    flex-direction: column;
-    background-color:  $primary;
+    flex-direction: row;
+    height: 70px;
+    padding: 20px 20px 10px 20px;
 
-    .header-search {
-
-        display: flex;
-        flex-direction: row;
-        height: 70px;
-        padding: 20px 20px 10px 20px;
-        
-        &__logo {
-            flex: 1;
-            width: 15%;
-            background-color: red;
-        }
-
-        &__input{
-            // flex: 3;
-            display: flex;
-            flex-direction: row;
-            background-color: royalblue;
-
-            input {
-
-            }
-
-            a {
-                // width: 50%;
-                // height: 30%;
-                padding: 5px;
-                background-color: $pale-skin;
-
-                img {
-                    width: 10%;
-                }
-            }
-        }
-
-        &__cart {
-            flex: 1;
-            // max-width: 2%;
-            // padding: 15px;
-
-            background-color: palegreen;
-        }
+    &__logo {
+      flex: 1;
+      width: 15%;
+      background-color: red;
     }
 
+    &__input {
+      // flex: 3;
+      display: flex;
+      flex-direction: row;
+      background-color: royalblue;
 
-    .header-navigation {
+      input {
+      }
+
+      a {
+        // width: 50%;
+        // height: 30%;
+        padding: 5px;
+        background-color: $pale-skin;
+
+        img {
+          width: 10%;
+        }
+      }
+    }
+
+    &__cart {
+      flex: 1;
+      // max-width: 2%;
+      // padding: 15px;
+
+      background-color: palegreen;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2%;
+    height: 50px;
+
+    @media screen and (max-width: $tablet) {
+      z-index: 3;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 40%;
+      height: 100vh;
+      margin: 0;
+      padding: 0 15px;
+      background-color: cornflowerblue;
+    }
+
+    .header__navigation {
+      a {
+        color: $white;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-decoration: none;
+        padding: 15px;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      @media screen and (max-width: $tablet) {
+
         display: flex;
-        flex-direction: row;
-        height: 48px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;  
+
+        order: 2;
+
+        a {
+            color: $dark-gray;
+            padding-left: 0;
+        }
+
+      }
+    }
+
+    .header__login {
+      display: flex;
+      flex-direction: row;
+
+      a {
+        color: $white;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-decoration: none;
+        padding: 15px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      @media screen and (max-width: $tablet) {
+        order: 1;
+        width: 100%;
+        align-items: center;
+
+        a {
+            color: $dark-gray;
+            padding-left: 0;
+        }
+
+        .close {
+          display: block;
+          justify-self: end;
+        }
+      }
+    }
+  }
+}
+
+.option-chevron {
+  display: inline-block;
+  background-image: url("/public/images/down-chevron-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+}
+
+.close {
+  display: none;
+  background-image: url("/public/images/down-chevron-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+}
+
+.overlay {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    opacity: 0.5;
+
+    &.show {
+        display: inherit;
     }
 }
 
-
-
-// background-color: ;
+// @media screen and (max-width:$tablet){
+//     width: 80%;
+//     font-size: 1.3rem;
+// }
