@@ -6,42 +6,64 @@ header {
   .header-search {
     display: flex;
     flex-direction: row;
+    align-items: center;
     height: 70px;
     padding: 20px 20px 10px 20px;
 
+    &__menu {
+      display: none;
+      background-image: url('/public/images/menu-icon.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 25px;
+      margin: 5px;
+
+      @media screen and (max-width: $tablet) {
+        display: block;
+      }
+    }
+
     &__logo {
-      flex: 1;
+      // flex: 1;
       width: 15%;
-      background-color: red;
+      // background-color: red;
     }
 
     &__input {
-      // flex: 3;
       display: flex;
       flex-direction: row;
+      width: 75%;
       background-color: royalblue;
 
       input {
+        
+        padding: 15px 5px;
+        border: 0;
+        border-radius: 3px;
+        font-size: 1.1rem;
+        font-weight: 200;
+        color: $light-black;
       }
 
       a {
-        // width: 50%;
-        // height: 30%;
+        width: 53px;
         padding: 5px;
         background-color: $pale-skin;
 
         img {
-          width: 10%;
+          // width: 50%;
+          margin: 15px;
         }
       }
     }
 
     &__cart {
-      flex: 1;
-      // max-width: 2%;
-      // padding: 15px;
-
-      background-color: palegreen;
+      width: 25px;
+      height: 25px;
+      padding: 15px;
+      margin-left: auto;
+      background-color: blueviolet;
     }
   }
 
@@ -53,17 +75,25 @@ header {
     margin: 0 2%;
     height: 50px;
 
+    &.open {
+      left: 0vw;
+      opacity: 1;
+    }
+
     @media screen and (max-width: $tablet) {
       z-index: 3;
       position: absolute;
-      display: flex;
+      left: -100vw;
+      opacity: 0;
       flex-direction: column;
       justify-content: flex-start;
       width: 40%;
       height: 100vh;
+      
       margin: 0;
       padding: 0 15px;
-      background-color: cornflowerblue;
+      background-color: palevioletred;
+      transition: all .25s ease-in-out;
     }
 
     .header__navigation {
@@ -84,7 +114,7 @@ header {
 
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        // align-items: flex-start;
         width: 100%;  
 
         order: 2;
@@ -117,6 +147,7 @@ header {
         order: 1;
         width: 100%;
         align-items: center;
+        margin-bottom: 25%;
 
         a {
             color: $dark-gray;
@@ -125,16 +156,18 @@ header {
 
         .close {
           display: block;
-          justify-self: end;
+          margin-left: auto;
         }
       }
     }
+
+    
   }
 }
 
 .option-chevron {
   display: inline-block;
-  background-image: url("/public/images/down-chevron-icon.svg");
+  background-image: url('/public/images/down-chevron-icon.svg');
   background-size: contain;
   background-repeat: no-repeat;
   width: 8px;
@@ -144,12 +177,12 @@ header {
 
 .close {
   display: none;
-  background-image: url("/public/images/down-chevron-icon.svg");
+  background-image: url('/public/images/close-icon.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 8px;
-  height: 8px;
-  margin-left: 5px;
+  width: 13px;
+  height: 13px;
+  // margin-left: 5px;
 }
 
 .overlay {

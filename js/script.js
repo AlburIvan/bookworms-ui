@@ -1,8 +1,21 @@
-// the following line includes jquery from node_modules/
-//=include jquery/dist/jquery.min.js
+let nav = document.querySelector('nav');
+let burgerMenu = document.querySelector('.header-search__menu');
+let burgerMenuClose = document.querySelector('.close');
+let overlay = document.querySelector('.overlay');
 
-console.log("Log 1");
-console.log("log 2");
 
-// the following line includes other-script.js from js/
-//=include other-script.js
+burgerMenu.addEventListener('click', () => {
+    nav.classList.add('open')
+    overlay.classList.add('show')
+});
+
+burgerMenuClose.addEventListener('click', () => {
+    nav.classList.remove('open')
+    overlay.classList.remove('show')
+});
+
+overlay.addEventListener('click', () => {
+    nav.classList.remove('open')
+    overlay.classList.remove('show')
+});
+

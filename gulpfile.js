@@ -68,7 +68,8 @@ function browserSync(done) {
   browsersync.init({
     server: {
       baseDir: "./"
-    }
+    },
+    watchEvents: [ 'change', 'add', 'unlink']
   });
   done();
 }
