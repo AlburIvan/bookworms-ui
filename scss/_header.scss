@@ -2,19 +2,22 @@ header {
   display: flex;
   flex-direction: column;
   background-color: $primary;
+  padding: 20px 20px 10px 20px;
   transition: all .5s;
+
+  @media screen and (max-width: $tablet) {
+    padding: 10px 10px;
+  }
 
   .header-search {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 70px;
-    padding: 20px 20px 10px 20px;
     transition: all .5s;
 
     @media screen and (max-width: $tablet) {
       justify-content: space-between;
-      padding: 10px 10px;
     }
 
     &__menu {
@@ -42,6 +45,19 @@ header {
       }
     }
 
+
+    &__input {
+      align-items: center;
+
+      display: flex;
+      flex-grow: 1;
+      
+      @media screen and (max-width: $tablet) {
+        order: 1;
+      }
+
+
+    }
    /*  &__input {
       display: flex;
       flex-direction: row;
@@ -90,7 +106,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 2%;
+    // margin: 0 2%;
     height: 50px;
 
     &.open {
@@ -101,6 +117,7 @@ header {
     @media screen and (max-width: $tablet) {
       z-index: 3;
       position: absolute;
+      top: 0;
       left: -100vw;
       flex-direction: column;
       justify-content: flex-start;
