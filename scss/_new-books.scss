@@ -2,7 +2,8 @@
 
     margin-top: 10%;
     height: auto;
-
+    margin-left: 20px;
+    margin-right: 20px;
 
 
     h3 {
@@ -21,14 +22,32 @@
 
 
         &-item {
-            width: 20%;
+            width: calc(20% - 1.25rem);
+            margin-right: 20px;
             background-color: olive;
+            padding: 1.25rem;
         }
 
-
         .banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             width: 20%;
+            color: $white;
             background-color: $primary;
+            text-decoration: none;
+
+            :first-child {
+                font-size: .9rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            :last-child {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
         }
     }
 
