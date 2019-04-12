@@ -1,0 +1,56 @@
+.instagram-feed {
+
+    margin: 0 20px;
+    margin-top: 8%;    
+    height: auto;
+
+    @media screen and (max-width: $tablet) {
+        margin: 0 10px;
+        margin-top: 10%;  
+    }
+
+    h3 {
+        color: $darkest-gray;
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+
+    &-gallery {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        padding: 5px 0;
+        overflow-x: scroll;
+        // overflow-y: hidden;
+
+      
+        figure {
+
+            width: 45%;
+            height: 250px;
+            margin: 0 2% 0 0;
+
+            @media screen and (max-width: $tablet) {
+                width: 35%;
+                height: auto;
+                margin: 0 2% 0 0;
+            }
+
+            a > img {
+                width: 250px;
+                height: 250px;
+
+                @media screen and (max-width: $tablet) {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+
+    }
+
+}
