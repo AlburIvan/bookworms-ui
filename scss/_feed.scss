@@ -25,17 +25,16 @@
         height: 260px;
         padding: 5px 0;
         overflow-x: scroll;
-        // overflow-y: hidden;
-
       
-        figure {
+        @media screen and (max-width: $tablet) {
+            height: 180px;
+        }
 
-            width: 45%;
+        figure {
             height: 250px;
             margin: 0 2% 0 0;
 
             @media screen and (max-width: $tablet) {
-                width: 35%;
                 height: auto;
                 margin: 0 2% 0 0;
             }

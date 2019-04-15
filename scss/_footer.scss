@@ -8,11 +8,21 @@ footer {
         flex-direction: row;
         padding: 40px 20px;
 
-        &__nav {
+        @media screen and (max-width: $tablet) {
+            padding: 25px 20px;
+            flex-direction: column;
+        }
 
+        &__nav {
             display: flex;
             flex-direction: column;
             width: max-content;
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                padding-bottom: 6%;
+                border-bottom: 1px solid rgba($dark-gray, .3);
+            }
 
             h4 {
                 color: $darkest-gray;
@@ -39,8 +49,14 @@ footer {
             display: flex;
             flex-direction: column;
             width: 20%;
-            max-width: 55%;
             margin-left: 10%;
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                margin-left: 0;
+                padding-bottom: 6%;
+                border-bottom: 1px solid rgba($dark-gray, .3);
+            }
 
             h4 {
                 color: $darkest-gray;
@@ -58,13 +74,32 @@ footer {
                 transition: opacity 0.3s;
             }
 
-            input {
+            input[type="text"] {
+                color: $dark-gray;
                 border: 1px solid $dark-gray;
                 border-radius: 3px;
                 outline: 0;
                 padding: 10px;
                 font-size: 1.2rem;
+                font-weight: 300;
                 line-height: 1.5;
+            }
+
+            a {
+                color: $dark-gray;
+                background-color:rgba($white, .8);
+                margin-top: 15px;
+                padding: 10px 0;
+                border: 1px solid rgba($dark-gray, .3);
+                border-radius: 3px;
+                font-size: 1.4rem;
+                font-weight: 600;
+                text-decoration: none;
+                text-align: center;
+
+                &:hover {
+                    background-color: rgba($white, 1);
+                }
             }
         }
     }
@@ -72,7 +107,6 @@ footer {
     copyright {
         display: flex;
         justify-content: center;
-        width: 100%;
         color: $dark-gray;
         padding: 0 20px 20px 0;
         font-weight: 300;

@@ -19,18 +19,15 @@
 
     <div class="header-search">
       <span class="header-search__menu"></span>
-      <a href="/">
-        <img class="header-search__logo" src="/public/images/bookworms-logo.png" alt="BookWorms RD Logo" />
+      <a href="/" class="header-search__logo">
+        <img  src="/public/images/bookworms-logo.png" alt="BookWorms RD Logo" />
       </a>
-      <!-- 
-      <div class="header-search__input">
-          <input type="text" id="search-bar" placeholder="¿Qué Buscas?" />
-          <a href="#">
-            <img src="/public/images/search-icon.svg" alt="" srcset="">
-          </a>
-      </div> -->
-
-
+      <div class="header-search-wrapper">
+        <input type="text" class="header-search-wrapper__input" placeholder="¿Qué buscas?" />
+        <button class="header-search-wrapper__button">
+          <img src="/public/images/search-icon.svg" alt="" srcset="" />
+        </button>
+      </div>
       <img class="header-search__cart" src="/public/images/shopping-cart-icon.svg" alt="Shopping Cart" />
     </div>
 
@@ -53,7 +50,12 @@
 
 
   <!-- Gallery Section -->
-  <section class="gallery"></section>
+  <section class="gallery">
+    <div class="gallery__overlay"></div>
+    <h3>¡Acabados de Llegar!</h4>
+    <p>Delen una chequeadita a los libros que nos acaban de llegar :)</p>
+    <a href="#">¡¡Déjame verlo!!</a>
+  </section>
 
   <!-- Information -->
   <section class="information">
@@ -154,7 +156,13 @@
     <h3>Un poquito de todo</h3>
 
     <div class="promo-container">
-      <div class="promo-container-tile__help"></div>
+      <div class="promo-container-tile__help">
+        <article>
+            <h3>No sé que leer</h4>
+            <p>Si eres el de los que les cuesta elegir que libro leer, estamos aquí para ayudarte.</p>
+            <a href="#">Ayúdenme por favor</a>
+        </article>
+      </div>
       <div class="promo-container-tile__steps"></div>
       <div class="promo-container-tile__challenge"></div>
       <div class="promo-container-tile__plans"></div>
@@ -169,43 +177,43 @@
 
       <figure>
         <a href="#">
-          <img src="/public/images/instagram_example_img.jpg" alt="Instagram Example Image" />
+          <img decoding="async" src="/public/images/instagram_example_img.jpg" alt="Instagram Example Image" />
         </a>
       </figure>
 
       <figure>
         <a href="#">
-          <img src="https://picsum.photos/400/300/?random" alt="Instagram Example Image" />
+          <img decoding="async" src="https://picsum.photos/400/300/?random" alt="Instagram Example Image" />
         </a>
       </figure>
 
       <figure>
         <a href="#">
-          <img src="https://picsum.photos/402/300/?random" alt="Instagram Example Image" />
+          <img decoding="async" src="https://picsum.photos/402/300/?random" alt="Instagram Example Image" />
         </a>
       </figure>
 
       <figure>
         <a href="#">
-          <img src="https://picsum.photos/403/300/?random" alt="Instagram Example Image" />
+          <img decoding="async" src="https://picsum.photos/403/300/?random" alt="Instagram Example Image" />
         </a>
       </figure>
 
       <figure>
         <a href="#">
-          <img src="https://picsum.photos/404/300/?random" alt="Instagram Example Image" />
+          <img decoding="async" src="https://picsum.photos/404/300/?random" alt="Instagram Example Image" />
         </a>
       </figure>
 
       <figure>
         <a href="#">
-          <img src="https://picsum.photos/405/300/?random" alt="Instagram Example Image" />
+          <img decoding="async" src="https://picsum.photos/405/300/?random" alt="Instagram Example Image" />
         </a>
       </figure>
 
       <figure>
         <a href="#">
-          <img src="https://picsum.photos/406/300/?random" alt="Instagram Example Image" />
+          <img decoding="async" src="https://picsum.photos/406/300/?random" alt="Instagram Example Image" />
         </a>
       </figure>
 
@@ -237,9 +245,10 @@
         <a href="#">Shop</a>
       </div>
       <div class="footer-menu-wrapper__subscribe">
-        <h4>Suscribete</h4>
+        <h4>Suscríbete</h4>
         <p>Pon tu correo aquí para que te lleguen nuestros correos :)</p>
         <input type="text" placeholder="Correo" />
+        <a href="#">Suscríbete</a>
       </div>
     </div>
 
